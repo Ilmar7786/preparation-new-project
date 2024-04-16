@@ -1,16 +1,20 @@
+import eslintPlugin from "@nabla/vite-plugin-eslint"
 import react from "@vitejs/plugin-react"
 import { defineConfig } from "vite"
-import { EsLinter, linterPlugin, TypeScriptLinter } from "vite-plugin-linter"
+import checkerPlugin from "vite-plugin-checker"
 import tsconfigPaths from "vite-tsconfig-paths"
 
 // https://vitejs.dev/config/
-export default defineConfig(configEnv => ({
+export default defineConfig(() => ({
   plugins: [
     react(),
+    eslintPlugin(),
     tsconfigPaths(),
-    linterPlugin({
-      include: ["./src/**/*.ts", "./src/**/*.tsx"],
-      linters: [new EsLinter({ configEnv }), new TypeScriptLinter()],
+    checkerPlugin({
+      typescript: true,
+      eslint: {
+        lintCommand: "eslint .",
+      },
     }),
   ],
 }))
