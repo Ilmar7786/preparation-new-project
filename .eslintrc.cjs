@@ -23,7 +23,7 @@ module.exports = {
       },
     },
   },
-  plugins: ["react-refresh", "simple-import-sort"],
+  plugins: ["react-refresh", "simple-import-sort", "import"],
   extends: [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
@@ -37,22 +37,26 @@ module.exports = {
   rules: {
     "@typescript-eslint/no-unused-vars": "error",
     "@typescript-eslint/no-explicit-any": "error",
+    "@typescript-eslint/no-use-before-define": "off",
+    "no-nested-ternary": "off",
+    "simple-import-sort/imports": [
+      "error",
+      {
+        "groups": [["^\\u0000", "^@?\\w", "^[^.]", "^\\."]]
+      }
+    ],
+    "import/extensions": "off",
+    "react/prop-types": "off",
     "react/react-in-jsx-scope": "off",
     "react/require-default-props": "off",
-    "import/named": "off",
     "react/jsx-props-no-spreading": "off",
-    "no-nested-ternary": "off",
-    "import/prefer-default-export": "off",
-    "react/function-component-definition": "off",
-    "simple-import-sort/imports": "error",
-    "simple-import-sort/exports": "error",
-    "import/first": "error",
-    "import/newline-after-import": "error",
-    "import/no-absolute-path": "off",
-    // "import/no-unresolved": ["error", { ignore: [".svg"] }],
-    "import/no-extraneous-dependencies": "off",
-    "react/prop-types": "off",
-    "@typescript-eslint/no-use-before-define": "off",
+    "react/function-component-definition": [
+      "error",
+      {
+        namedComponents: "arrow-function",
+        unnamedComponents: "arrow-function",
+      }
+    ],
     "react-refresh/only-export-components": [
       "warn",
       { allowConstantExport: true },
