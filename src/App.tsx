@@ -17,8 +17,7 @@ const App = () => {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        {/* eslint-disable-next-line @typescript-eslint/no-shadow */}
-        <button type="button" onClick={() => setCount(count => count + 1)}>
+        <button type="button" onClick={() => setCount(prev => prev + 1)}>
           count is {count}
         </button>
         <p>

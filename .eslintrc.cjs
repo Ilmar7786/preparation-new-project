@@ -1,27 +1,27 @@
 module.exports = {
   root: true,
-  ignorePatterns: ["dist", ".eslintrc.cjs"],
   parser: "@typescript-eslint/parser",
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
   env: {
     browser: true,
     node: true,
-    es6: true,
+    es6: true
+  },
+  parserOptions: {
+    ecmaVersion: "latest",
+    sourceType: "module",
+    project: ["./tsconfig.json", "./tsconfig.node.json"],
+    tsconfigRootDir: __dirname
   },
   settings: {
     react: {
-      version: "detect",
+      version: "detect"
     },
     "import/resolver": {
       node: {
-        extensions: [".ts", ".tsx"],
-      },
-    },
+        paths: ["src"],
+        extensions: [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
   },
   plugins: ["react-refresh", "simple-import-sort", "import"],
   extends: [
@@ -32,7 +32,7 @@ module.exports = {
     "plugin:jsx-a11y/recommended",
     "plugin:sonarjs/recommended",
     "plugin:security/recommended-legacy",
-    "plugin:prettier/recommended",
+    "plugin:prettier/recommended" // Make sure this is always the last element in the array.
   ],
   rules: {
     "@typescript-eslint/no-unused-vars": "error",
@@ -54,12 +54,12 @@ module.exports = {
       "error",
       {
         namedComponents: "arrow-function",
-        unnamedComponents: "arrow-function",
+        unnamedComponents: "arrow-function"
       }
     ],
     "react-refresh/only-export-components": [
       "warn",
-      { allowConstantExport: true },
-    ],
-  },
+      { allowConstantExport: true }
+    ]
+  }
 };
