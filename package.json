@@ -18,6 +18,8 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.2.2",
+    "@commitlint/config-conventional": "^19.2.2",
     "@nabla/vite-plugin-eslint": "^2.0.2",
     "@neodx/svg": "^0.7.0",
     "@types/node": "^20.12.7",
