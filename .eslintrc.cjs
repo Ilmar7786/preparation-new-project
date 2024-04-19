@@ -34,6 +34,7 @@ module.exports = {
     "plugin:security/recommended-legacy",
     "plugin:prettier/recommended" // Make sure this is always the last element in the array.
   ],
+  ignorePatterns: ["vite.config.ts"],
   rules: {
     "@typescript-eslint/no-unused-vars": "error",
     "@typescript-eslint/no-explicit-any": "error",
