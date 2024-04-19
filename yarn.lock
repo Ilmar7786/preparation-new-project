@@ -5246,6 +5246,7 @@ __metadata:
   dependencies:
     "@commitlint/cli": "npm:^19.2.2"
     "@commitlint/config-conventional": "npm:^19.2.2"
+    "@commitlint/types": "npm:^19.0.3"
     "@nabla/vite-plugin-eslint": "npm:^2.0.2"
     "@neodx/svg": "npm:^0.7.0"
     "@types/node": "npm:^20.12.7"
