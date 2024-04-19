@@ -1,6 +1,7 @@
 import "./App.css"
 import { useState } from "react"
 import { Icon } from "@/shared/ui"
+import ViteIcon from "./vite.svg?react"
 
 const App = () => {
   const [count, setCount] = useState(0)
@@ -9,7 +10,7 @@ const App = () => {
     <>
       <div>
         <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
-          <Icon name="common/vite" className="logo" />
+          <ViteIcon className="logo" />
         </a>
         <a href="https://react.dev" target="_blank" rel="noreferrer">
           <Icon name="common/react" className="logo react" />

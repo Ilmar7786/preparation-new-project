@@ -17,7 +17,7 @@ export default defineConfig(({ isPreview }) => ({
       root: "assets",
       output: "public/sprites",
       group: true,
-      fileName: isPreview ? undefined : "{name}.{hash:8}.svg", // add to prod
+      fileName: !isPreview ? undefined : "{name}.{hash:8}.svg", // add to prod
       resetColors: {
         replaceUnknown: "currentColor",
       },

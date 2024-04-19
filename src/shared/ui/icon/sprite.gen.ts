@@ -1,5 +1,5 @@
 export interface SpritesMap {
-  common: "react" | "vite"
+  common: "react"
 }
 export const SPRITES_META: {
   [Key in keyof SpritesMap]: {
@@ -15,16 +15,11 @@ export const SPRITES_META: {
   }
 } = {
   common: {
-    filePath: "common.7e441973.svg",
+    filePath: "common.svg",
     items: {
       react: {
         viewBox: "0 0 256 228",
         width: 35.93,
-        height: 32,
-      },
-      vite: {
-        viewBox: "0 0 256 257",
-        width: 31.88,
         height: 32,
       },
     },
